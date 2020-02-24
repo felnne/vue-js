@@ -2,11 +2,11 @@
 # Following variable must be passed in
 #  SENTRY_AUTH_TOKEN
 
-SENTRY_ORG=testorg-az
-SENTRY_PROJECT=vue-js
 # 'associate_commits' command disabled
 # setup_release: create_release associate_commits upload_sourcemaps
 
+SENTRY_ORG=antarctica
+SENTRY_PROJECT=felnne-vue-testing
 VERSION=`sentry-cli releases propose-version`
 
 setup_release: create_release upload_sourcemaps

@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "VUE_APP_RELEASE=`sentry-cli releases propose-version`  vue-cli-service serve -s --port 3003 --open",
+    "serve": "VUE_APP_RELEASE=`sentry-cli releases propose-version` vue-cli-service serve --port 9000",
     "lint": "vue-cli-service lint",
-    "deploy": "./node_modules/.bin/serve -s dist",
+    "deploy": "./node_modules/.bin/serve -n -s dist -l 9000",
     "predeploy": "npm run build && make setup_release",
     "build": "VUE_APP_RELEASE=`sentry-cli releases propose-version` vue-cli-service build --mode production"
   },

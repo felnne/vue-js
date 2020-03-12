@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
 /dist
-src/assets/vue-js_files/
 
 # local env files
 .env.local
@@ -20,3 +19,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+/.sentryclirc

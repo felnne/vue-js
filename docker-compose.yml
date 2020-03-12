@@ -3,17 +3,16 @@ version: "2"
 
 services:
   app:
-    image: sentry-vue-testing:latest
+    image: sentry-vue-testing:new-demo-latest
     build: .
-    command: "npm run deploy"
-    volumes:
-      - ./.git/:/usr/src/app/.git/
-      - ./public/:/usr/src/app/public/
-      - ./src/:/usr/src/app/src/
-      - ./babel.config.js:/usr/src/app/babel.config.js
-      - ./Makefile:/usr/src/app/Makefile
-      - ./package.json:/usr/src/app/package.json
-      - ./package-lock.json:/usr/src/app/package-lock.json
-    env_file: .env
+    command: "npx serve dist/"
+    # volumes:
+    #   - ./.git/:/usr/src/app/.git/
+    #   - ./public/:/usr/src/app/public/
+    #   - ./src/:/usr/src/app/src/
+    #   - ./.sentryclirc:/usr/src/app/.sentryclirc
+    #   - ./babel.config.js:/usr/src/app/babel.config.js
+    #   - ./vue.config.js:/usr/src/app/vue.config.js
+    #   - ./yarn.lock:/usr/src/app/yarn.lock
     ports:
-      - "9000:9000"
+      - "5000:5000"
